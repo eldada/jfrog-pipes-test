@@ -25,9 +25,9 @@ pipelines:
             - add_run_variables current_runid=$run_id
             - echo Previous run ID is $prev_runid
             - echo Current run ID is $current_runid
-            - echo res_myAppRepo_resourcePath: $res_myAppRepo_resourcePath
-            - echo res_myAppRepo_gitProvider_name: $res_myAppRepo_gitProvider_name
-            - echo res_myAppRepo_commitSha: $res_myAppRepo_commitSha
+            - echo res_myAppRepo_resourcePath is $res_myAppRepo_resourcePath
+            - echo res_myAppRepo_gitProvider_name is $res_myAppRepo_gitProvider_name
+            - echo res_myAppRepo_commitSha is $res_myAppRepo_commitSha
  
       - name: step_2
         type: Bash
