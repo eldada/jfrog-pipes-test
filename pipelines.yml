@@ -1,3 +1,11 @@
+resources:
+  - name: myAppRepo
+    type: GitRepo
+    configuration:
+      gitProvider: EldadaGitHub
+      path: eldada/jfrog-pipes-test
+
+
 pipelines:
   - name: pipeline_hello_world
     configuration:
