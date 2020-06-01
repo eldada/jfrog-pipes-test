@@ -60,5 +60,16 @@ pipelines:
             - echo $MY_MESSAGE
             - echo "Running $pipeline_name | $step_name on node ID $step_node_id"
             - add_pipeline_variables prev_runid=$run_id           
+
+      - name: step_5
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: step_4
+        execution:
+          onExecute:
+            - echo "Final step?"
+            - echo "Running $pipeline_name | $step_name on node ID $step_node_id"
+            - add_pipeline_variables prev_runid=$run_id           
             - echo $current_runid Completed
-        
+
