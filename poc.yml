@@ -7,4 +7,5 @@ pipelines:
           onExecute:
             - echo "============"
             - echo "Hello world!"
+            - echo " 2021-04-15 "
             - echo "============"
