@@ -87,6 +87,6 @@ pipelines:
             - name: fileSpecCody
         execution:
           onExecute:
-            - echo "Showing downloaded files"
-            - ls -la .
+            - echo "Showing workspace dir ($pipeline_workspace_dir)"
+            - ls -la . $pipeline_workspace_dir
     
