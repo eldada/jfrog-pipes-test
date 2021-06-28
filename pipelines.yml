@@ -5,7 +5,6 @@ resources:
       gitProvider: EldadaGitHub
       path: eldada/jfrog-pipes-test
 
-
 pipelines:
   - name: pipeline_hello_world
     configuration:
@@ -72,4 +71,5 @@ pipelines:
             - echo "Running $pipeline_name | $step_name on node ID $step_node_id"
             - add_pipeline_variables prev_runid=$run_id           
             - echo $current_runid Completed
+            - echo TESTS COMPLETE
 
