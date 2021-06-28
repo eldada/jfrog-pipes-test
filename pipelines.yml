@@ -5,6 +5,12 @@ resources:
       gitProvider: EldadaGitHub
       path: eldada/jfrog-pipes-test
 
+  - name: fileSpecCody
+    type: FileSpec
+    configuration:
+      sourceArtifactory: EldadaArtifactory
+      pattern: "generic-local/cat/"
+     
 pipelines:
   - name: pipeline_hello_world
     configuration:
@@ -67,9 +73,20 @@ pipelines:
             - name: step_4
         execution:
           onExecute:
-            - echo "Final step?"
             - echo "Running $pipeline_name | $step_name on node ID $step_node_id"
             - add_pipeline_variables prev_runid=$run_id           
             - echo $current_runid Completed
             - echo TESTS COMPLETE
 
+      - name: step_6
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: step_5
+          inputResources:
+            - name: fileSpecCody
+        execution:
+          onExecute:
+            - echo "Showing downloaded files"
+            - ls -la .
+    
