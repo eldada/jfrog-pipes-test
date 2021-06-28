@@ -10,6 +10,7 @@ resources:
     configuration:
       sourceArtifactory: EldadaArtifactory
       pattern: "generic-local/cat/"
+      target: $pipeline_workspace_dir
      
 pipelines:
   - name: pipeline_hello_world
@@ -88,5 +89,6 @@ pipelines:
         execution:
           onExecute:
             - echo "Showing workspace dir ($pipeline_workspace_dir)"
+            - echo "pwd is $(pwd)"
             - ls -la . $pipeline_workspace_dir
     
