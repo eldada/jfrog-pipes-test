@@ -88,6 +88,8 @@ pipelines:
             - name: fileSpecCody
         execution:
           onExecute:
+            - env | sort
+            - echo "PWD is $(pwd)"
             - echo "File spec download path is $res_fileSpecCody_resourcePath"
             - ls -la $res_fileSpecCody_resourcePath
     
