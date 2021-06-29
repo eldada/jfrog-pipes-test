@@ -8,3 +8,4 @@ pipelines:
             - env | sort
             - docker version
             - docker ps -a
+            - echo "----------- DONE -----------"
