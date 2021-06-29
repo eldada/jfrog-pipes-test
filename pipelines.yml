@@ -91,5 +91,5 @@ pipelines:
             - env | sort
             - echo "PWD is $(pwd)"
             - echo "File spec download path is $res_fileSpecCody_resourcePath"
-            - ls -la $res_fileSpecCody_resourcePath
+            - ls -laR $res_fileSpecCody_resourcePath
     
