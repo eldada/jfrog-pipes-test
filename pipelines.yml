@@ -10,7 +10,6 @@ resources:
     configuration:
       sourceArtifactory: EldadaArtifactory
       pattern: "generic-local/cat/"
-      target: $pipeline_workspace_dir
      
 pipelines:
   - name: pipeline_hello_world
