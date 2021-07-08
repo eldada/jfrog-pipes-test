@@ -1,3 +1,9 @@
+resources:
+  - name: cron_trigger
+    type: CronTrigger
+    configuration:
+      interval: '0 0 1 * * ?'
+
 pipelines:
   - name: my_first_pipeline
     steps:
