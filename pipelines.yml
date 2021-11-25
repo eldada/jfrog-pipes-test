@@ -68,7 +68,7 @@ pipelines:
             - name: step_4
         execution:
           onExecute:
-            - echo "Final step?"
+            - echo "Final step indeed"
             - echo "Running $pipeline_name | $step_name on node ID $step_node_id"
             - add_pipeline_variables prev_runid=$run_id           
             - echo $current_runid Completed
